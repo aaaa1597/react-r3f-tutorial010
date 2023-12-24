@@ -30,6 +30,7 @@ const App = () => {
         <Box position={[-0.75, 0, 0]} name="A" />
         <Box position={[0.75, 0, 0]} name="B" />
         <OrbitControls />
+        <gridHelper rotation={[Math.PI / 4, 0, 0]} />
       </Canvas>
     </div>
   );
