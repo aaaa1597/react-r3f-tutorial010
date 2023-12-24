@@ -2,11 +2,7 @@ import React, {useRef} from 'react';
 import './App.css';
 import { Canvas, useFrame, MeshProps  } from '@react-three/fiber'
 import * as THREE from 'three'
-
-type Props = {
-  position?: number[];
-  name?: string;
-}
+import { OrbitControls } from '@react-three/drei'
 
 const Box = (props: MeshProps) => {
   const ref = useRef<THREE.Mesh>(null!)
@@ -33,6 +29,7 @@ const App = () => {
         <directionalLight />
         <Box position={[-0.75, 0, 0]} name="A" />
         <Box position={[0.75, 0, 0]} name="B" />
+        <OrbitControls />
       </Canvas>
     </div>
   );
